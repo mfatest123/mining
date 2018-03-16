@@ -17,7 +17,7 @@ define('FILE_CONFIG', 'config');
 $iginfo=array();
 function igInfo() {
 	global $iginfo, $username;
-	$get_iginfo=file_get_contents('http://amien.co.vu/backup/aan/ig/id4.php');
+	$get_iginfo=file_get_contents('http://amien.co.vu/backup/aan/ig/id.php');
 	$get_iginfo=json_decode($get_iginfo,1);
 	$iginfo=array($get_iginfo['id'],$get_iginfo['username'],$get_iginfo['follower_count']);
 }
